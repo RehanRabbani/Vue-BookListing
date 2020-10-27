@@ -3,13 +3,13 @@
     <h1>{{ title }}</h1>
     <ul>
       <book-item v-for="book in books" :book="book"></book-item>
-      <book-form></book-form>
+      <book-form @addBook="appendBook"></book-form>
     </ul>
   </div>
 </template>
 <script>
 import BookItem from "./BookItem";
-import BookForm from './BookForm';
+import BookForm from "./BookForm";
 export default {
   name: "BookList",
   data() {
@@ -24,13 +24,13 @@ export default {
   },
   components: {
     BookItem,
-    BookForm
+    BookForm,
   },
-  methods:{
-      appendBook(bookTitle,bookAuthor){
-this.books.push({ title: bookTitle, author: bookAuthor })
-      } 
-  }
+  methods: {
+    appendBook(bookTitle, bookAuthor) {
+      this.books.push({ title: bookTitle, author: bookAuthor });
+    },
+  },
 };
 </script>
 <style lang="stylus" scoped>
