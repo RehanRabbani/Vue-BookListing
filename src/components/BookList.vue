@@ -1,4 +1,8 @@
-<template></template>
+<template>
+<div>
+    <h1>{{title}}</h1>
+</div>
+</template>
 <script>
 export default {
   name: "BookList",
@@ -9,4 +13,8 @@ export default {
   },
 };
 </script>
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+h1,h2{
+    font-weight :normal;
+}
+</style>
