@@ -21,7 +21,9 @@ export default {
       ],
     };
   },
-  components:BookItem,
+  components:{
+      BookItem
+  },
 };
 </script>
 <style lang="stylus" scoped>
